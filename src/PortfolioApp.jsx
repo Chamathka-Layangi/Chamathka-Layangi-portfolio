@@ -98,10 +98,7 @@ export default function PortfolioApp() {
         <nav className="navbar-inner glass-dock">
           <a href="#home" className="nav-brand">
             <div className="brand-badge">CL</div>
-            <div className="brand-name">
-              <span>Chamathka Layangi</span>
-              <span>SLIIT • COMPUTING</span>
-            </div>
+            <span className="brand-name">Chamathka Layangi</span>
           </a>
 
           <ul className="nav-links">

@@ -335,20 +335,11 @@ a {
 }
 
 .brand-name {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-name span:first-child {
-  font-size: 1rem;
-  line-height: 1.1;
-}
-
-.brand-name span:last-child {
-  font-size: 0.68rem;
-  font-family: var(--font-mono);
-  color: var(--accent-electric);
-  letter-spacing: 0.05em;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  line-height: 1;
 }
 
 .nav-links {
