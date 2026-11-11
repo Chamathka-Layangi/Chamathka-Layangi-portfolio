@@ -154,8 +154,8 @@ export default function PortfolioApp() {
                 <div className="animated-gradient-ring"></div>
                 <div className="avatar-inner-frame">
                   <img
-                    src="YOUR_PROFILE_IMAGE_URL"
-                    onError={(e) => { e.target.onerror = null; e.target.src = '/assets/images/avatar-placeholder.svg'; }}
+                    src="profile.jpg"
+                    onError={(e) => { e.target.onerror = null; e.target.src = 'assets/images/profile-placeholder.svg'; }}
                     alt="Chamathka Layangi"
                     className="profile-avatar-img"
                   />

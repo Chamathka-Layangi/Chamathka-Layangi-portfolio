@@ -240,13 +240,24 @@
           Transmitting Message...
         `;
 
-        setTimeout(() => {
+        const formData = new FormData(contactForm);
+
+        // Netlify Form AJAX submission with local dev fallback
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString()
+        }).then(() => {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalBtnText;
           contactForm.reset();
-
           window.showToast(`Thank you, ${name}! Your message has been sent. Chamathka will reply soon.`, '🚀');
-        }, 1200);
+        }).catch(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+          contactForm.reset();
+          window.showToast(`Thank you, ${name}! Your message has been sent. Chamathka will reply soon.`, '🚀');
+        });
       });
     }
 
@@ -254,7 +265,7 @@
     const copyChips = document.querySelectorAll('.copy-email-chip');
     copyChips.forEach((chip) => {
       chip.addEventListener('click', () => {
-        const email = 'chamathka.layangi@example.com';
+        const email = 'chamathkalayangi@gmail.com';
         navigator.clipboard.writeText(email).then(() => {
           window.showToast(`Copied to clipboard: ${email}`, '📋');
         }).catch(() => {

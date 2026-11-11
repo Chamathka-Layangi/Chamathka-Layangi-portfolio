@@ -44,7 +44,7 @@
     });
   }
 
-  // 2. 3D INTERACTIVE TILT EFFECT
+  // 2. CARD SPOTLIGHT INTERACTION (CSS manages the smooth translateY(-6px) lift)
   function init3DTilt() {
     const tiltCards = document.querySelectorAll('.tilt-card');
 
@@ -54,21 +54,14 @@
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
 
-        // Calculate percentage for spotlight
+        // Dynamic coordinate update for radial neon spotlight
         card.style.setProperty('--mouse-x', `${x}px`);
         card.style.setProperty('--mouse-y', `${y}px`);
-
-        // Compute 3D rotation angle (max 6deg for sleek elegance)
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = ((y - centerY) / centerY) * -5;
-        const rotateY = ((x - centerX) / centerX) * 5;
-
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-      });
+      }, { passive: true });
 
       card.addEventListener('mouseleave', () => {
-        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+        card.style.removeProperty('--mouse-x');
+        card.style.removeProperty('--mouse-y');
       });
     });
   }

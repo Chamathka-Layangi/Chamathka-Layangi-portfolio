@@ -6,8 +6,7 @@
   "scripts": {
     "start": "npx serve .",
     "dev": "vite",
-    "build": "echo 'Netlify build ready: Static portfolio compiled.'",
-    "build:vite": "vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "keywords": [

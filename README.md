@@ -99,16 +99,16 @@ project new/
 ## 🛠️ How to Customize Your Details
 
 ### 1. Replace Profile Photo
-In [`index.html`](./index.html), search for `YOUR_PROFILE_IMAGE_URL` (around line 166):
+Place your photo named `profile.jpg` directly in the project folder, or update the `src` attribute in [`index.html`](./index.html):
 ```html
 <img
-  src="YOUR_PROFILE_IMAGE_URL"
-  onerror="this.onerror=null; this.src='assets/images/avatar-placeholder.svg';"
+  src="profile.jpg"
+  onerror="this.onerror=null; this.src='assets/images/profile-placeholder.svg';"
   alt="Chamathka Layangi"
   class="profile-avatar-img"
 />
 ```
-Replace `YOUR_PROFILE_IMAGE_URL` with your local image file (e.g., `assets/images/chamathka.jpg`) or an online URL. If left as is, the built-in futuristic cyber illustration will display seamlessly.
+If `profile.jpg` is not present, a clean minimalist user silhouette will display automatically inside the glowing circular frame.
 
 ### 2. Replace Certificate Image
 In [`index.html`](./index.html), search for `YOUR_CERTIFICATE_IMAGE_URL` (around line 527):

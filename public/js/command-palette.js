@@ -228,7 +228,7 @@
   }
 
   function copyEmail() {
-    const email = 'chamathka.layangi@example.com';
+    const email = 'chamathkalayangi@gmail.com';
     navigator.clipboard.writeText(email).then(() => {
       if (window.showToast) {
         window.showToast(`Email copied: ${email}`);

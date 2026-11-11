@@ -442,9 +442,9 @@ a {
    HERO SECTION
    ========================================================================== */
 .hero-section {
-  min-height: 100vh;
-  padding-top: 140px;
-  padding-bottom: 80px;
+  min-height: calc(100vh - 80px);
+  padding-top: 130px;
+  padding-bottom: 40px;
   display: flex;
   align-items: center;
   position: relative;
@@ -540,7 +540,7 @@ a {
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 0;
 }
 
 .hero-quick-stats {
@@ -683,7 +683,7 @@ a {
    ABOUT ME SECTION & ROADMAP
    ========================================================================== */
 .about-section {
-  padding: 100px 0;
+  padding: 60px 0 100px;
   position: relative;
 }
 

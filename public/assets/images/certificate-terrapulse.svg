@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cert-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1128" />
+      <stop offset="50%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#0B0F19" />
+    </linearGradient>
+    <linearGradient id="gold-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="50%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0066FF" />
+    </linearGradient>
+    <filter id="badge-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Certificate Border Outer -->
+  <rect x="20" y="20" width="760" height="510" rx="20" fill="url(#cert-bg)" stroke="url(#gold-cyan)" stroke-width="3" />
+  
+  <!-- Subtle Inner Border -->
+  <rect x="35" y="35" width="730" height="480" rx="14" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-dasharray="8 6" />
+
+  <!-- Corner Tech Brackets -->
+  <path d="M 45 75 V 45 H 75" fill="none" stroke="#00F0FF" stroke-width="3" />
+  <path d="M 725 45 H 755 V 75" fill="none" stroke="#00F0FF" stroke-width="3" />
+  <path d="M 45 475 V 505 H 75" fill="none" stroke="#00F0FF" stroke-width="3" />
+  <path d="M 725 505 H 755 V 475" fill="none" stroke="#00F0FF" stroke-width="3" />
+
+  <!-- University & Project Badge Top -->
+  <circle cx="400" cy="110" r="42" fill="#0D1E3A" stroke="url(#gold-cyan)" stroke-width="2.5" filter="url(#badge-glow)" />
+  <path d="M 385 105 L 400 90 L 415 105 L 408 125 H 392 Z" fill="#00F0FF" />
+  <text x="400" y="118" fill="#0B0F19" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="900" text-anchor="middle">TOP 3</text>
+
+  <!-- Typography -->
+  <text x="400" y="185" fill="#38BDF8" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" letter-spacing="4" text-anchor="middle">SRI LANKA INSTITUTE OF INFORMATION TECHNOLOGY</text>
+  
+  <text x="400" y="225" fill="#F8FAFC" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800" text-anchor="middle">CERTIFICATE OF ACHIEVEMENT</text>
+  
+  <text x="400" y="255" fill="#94A3B8" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" text-anchor="middle">THIS DISTINCTION IS PROUDLY CONFERRED UPON</text>
+  
+  <text x="400" y="300" fill="#00F0FF" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" font-weight="800" text-anchor="middle" filter="url(#badge-glow)">Chamathka Layangi</text>
+  
+  <text x="400" y="335" fill="#E2E8F0" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" text-anchor="middle">For securing <tspan fill="#38BDF8" font-weight="700">TOP 3 WINNER</tspan> in the Computing &amp; IoT Project Showcase</text>
+  
+  <text x="400" y="360" fill="#94A3B8" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" text-anchor="middle">with the innovative project:</text>
+  
+  <rect x="230" y="375" width="340" height="42" rx="10" fill="rgba(0, 240, 255, 0.08)" stroke="#00F0FF" stroke-width="1.5" />
+  <text x="400" y="402" fill="#F8FAFC" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="800" text-anchor="middle" letter-spacing="1">TerraPulse Smart Weather Station</text>
+  
+  <!-- Signatures Line -->
+  <line x1="160" y1="465" x2="310" y2="465" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+  <text x="235" y="482" fill="#94A3B8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" text-anchor="middle">Faculty Advisor • SLIIT</text>
+
+  <line x1="490" y1="465" x2="640" y2="465" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+  <text x="565" y="482" fill="#94A3B8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" text-anchor="middle">Head of Computing / Jury</text>
+
+  <!-- Ribbon Badge Seal -->
+  <circle cx="700" cy="460" r="32" fill="#0B132B" stroke="#00F0FF" stroke-width="2" />
+  <text x="700" y="456" fill="#00F0FF" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" text-anchor="middle">OFFICIAL</text>
+  <text x="700" y="470" fill="#38BDF8" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" text-anchor="middle">AWARD</text>
+</svg>
