@@ -127,7 +127,7 @@ In [`index.html`](./index.html), search for `YOUR_EVENT_PHOTO_1`, `YOUR_EVENT_PH
 
 ### 4. Update Social & Contact Links
 In [`index.html`](./index.html) and [`js/command-palette.js`](./js/command-palette.js):
-- Change `mailto:your.email@example.com` to your real email address.
+- Email is configured as `chamathkalayangi@gmail.com`.
 - Change `https://github.com/YOUR_PROFILE` to your GitHub username.
 - Change `https://linkedin.com/in/YOUR_PROFILE` to your LinkedIn URL.
 

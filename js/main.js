@@ -254,7 +254,7 @@
     const copyChips = document.querySelectorAll('.copy-email-chip');
     copyChips.forEach((chip) => {
       chip.addEventListener('click', () => {
-        const email = 'chamathka.layangi@example.com';
+        const email = 'chamathkalayangi@gmail.com';
         navigator.clipboard.writeText(email).then(() => {
           window.showToast(`Copied to clipboard: ${email}`, '📋');
         }).catch(() => {
