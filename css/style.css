@@ -613,6 +613,9 @@ a {
   box-shadow: 0 0 40px rgba(0, 240, 255, 0.3);
   overflow: hidden;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .profile-avatar-img {
@@ -620,6 +623,9 @@ a {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center;
+  display: block;
+  aspect-ratio: 1 / 1;
   transition: transform var(--transition-normal);
 }
 
@@ -818,7 +824,7 @@ a {
 
 .pill-card:hover {
   border-color: var(--accent-electric);
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 .pill-icon {
@@ -894,7 +900,7 @@ a {
 }
 
 .skill-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   border-color: var(--accent-electric);
   box-shadow: var(--shadow-neon);
 }

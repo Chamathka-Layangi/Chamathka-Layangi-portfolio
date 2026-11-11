@@ -3,20 +3,61 @@
    Chamathka Layangi - Portfolio
    ========================================================================== */
 
-/* Glass Base Component */
-.glass-panel {
+/* Universal Section Card Component with Smooth Lift & Glow */
+.glass-panel,
+.tilt-card,
+.skill-card,
+.bento-card,
+.edu-card,
+.about-narrative-card,
+.pill-card,
+.workshop-photo-card,
+.contact-form-card,
+.cert-showcase-container,
+.timeline-content {
   background: var(--bg-card);
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
   border: 1px solid var(--border-subtle);
   box-shadow: var(--shadow-subtle);
   position: relative;
-  transition: border-color var(--transition-normal), box-shadow var(--transition-normal), transform var(--transition-fast);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: transform, box-shadow;
 }
 
-.glass-panel:hover {
-  border-color: var(--border-hover);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 25px var(--accent-glow);
+/* Smooth Lift/Hover Effect on All Section Cards */
+.glass-panel:hover,
+.tilt-card:hover,
+.skill-card:hover,
+.bento-card:hover,
+.edu-card:hover,
+.about-narrative-card:hover,
+.pill-card:hover,
+.workshop-photo-card:hover,
+.contact-form-card:hover,
+.cert-showcase-container:hover,
+.timeline-content:hover {
+  transform: translateY(-6px) !important;
+  border-color: rgba(0, 240, 255, 0.45) !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5), 0 0 28px rgba(0, 240, 255, 0.22) !important;
+}
+
+[data-theme="light"] .glass-panel:hover,
+[data-theme="light"] .tilt-card:hover,
+[data-theme="light"] .skill-card:hover,
+[data-theme="light"] .bento-card:hover,
+[data-theme="light"] .edu-card:hover,
+[data-theme="light"] .about-narrative-card:hover,
+[data-theme="light"] .pill-card:hover,
+[data-theme="light"] .workshop-photo-card:hover,
+[data-theme="light"] .contact-form-card:hover,
+[data-theme="light"] .cert-showcase-container:hover,
+[data-theme="light"] .timeline-content:hover {
+  transform: translateY(-6px) !important;
+  border-color: rgba(0, 102, 255, 0.4) !important;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12), 0 0 22px rgba(0, 102, 255, 0.18) !important;
 }
 
 /* Glass Floating Dock */

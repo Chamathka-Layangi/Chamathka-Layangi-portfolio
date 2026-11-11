@@ -156,13 +156,10 @@ export default function PortfolioApp() {
                   <img
                     src="YOUR_PROFILE_IMAGE_URL"
                     onError={(e) => { e.target.onerror = null; e.target.src = '/assets/images/avatar-placeholder.svg'; }}
-                    alt="Chamathka Layangi Profile"
+                    alt="Chamathka Layangi"
                     className="profile-avatar-img"
                   />
                 </div>
-                <div className="floating-chip chip-1">⚡ ESP32 Prototyping</div>
-                <div className="floating-chip chip-2">☕ Java OOP</div>
-                <div className="floating-chip chip-3">🏆 Top 3 TerraPulse</div>
               </div>
             </div>
           </div>

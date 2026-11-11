@@ -1,3 +1,37 @@
-﻿[build]
-  command = "npm run build && cp -r js dist/js"
-  publish = "dist"
+﻿# ==============================================================================
+# NETLIFY DEPLOYMENT CONFIGURATION
+# Chamathka Layangi Portfolio
+# ==============================================================================
+
+[build]
+  publish = "."
+
+# Security & Performance Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"
+
+# Fallback Routing for Single Page App
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

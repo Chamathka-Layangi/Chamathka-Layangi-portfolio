@@ -32,9 +32,8 @@
     <div class="glow-orb glow-orb-3"></div>
   </div>
 
-  <!-- Custom Glowing Cursor (Follower + Ring) -->
-  <div class="custom-cursor-dot"></div>
-  <div class="custom-cursor-ring"></div>
+  <!-- Soft Ambient Background Cursor Glow (Smooth Translucent Electric Light) -->
+  <div class="cursor-ambient-glow" id="cursorAmbientGlow" aria-hidden="true"></div>
 
   <!-- ==========================================================================
        1. NAVBAR: Sticky Glassmorphism Floating Dock
@@ -164,20 +163,9 @@
                 <img
                   src="YOUR_PROFILE_IMAGE_URL"
                   onerror="this.onerror=null; this.src='assets/images/avatar-placeholder.svg';"
-                  alt="Chamathka Layangi - Computing Undergraduate Profile"
+                  alt="Chamathka Layangi"
                   class="profile-avatar-img"
                 />
-              </div>
-
-              <!-- Floating Micro Badges -->
-              <div class="floating-chip chip-1">
-                <span>⚡</span> ESP32 Prototyping
-              </div>
-              <div class="floating-chip chip-2">
-                <span>☕</span> Java OOP
-              </div>
-              <div class="floating-chip chip-3">
-                <span>🏆</span> Top 3 TerraPulse
               </div>
             </div>
           </div>
@@ -1120,26 +1108,29 @@
             
             <h3 class="contact-form-title">Send a Message</h3>
 
-            <form id="portfolioContactForm" novalidate>
+            <form id="portfolioContactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+              <input type="hidden" name="form-name" value="contact" />
+              <p style="display: none;"><label>Don't fill this out if you're human: <input name="bot-field" /></label></p>
+              
               <div class="form-group-row">
                 <div class="form-group">
                   <label for="contactName" class="form-label">Your Name</label>
-                  <input type="text" id="contactName" class="form-input" placeholder="John Doe" required />
+                  <input type="text" id="contactName" name="name" class="form-input" placeholder="John Doe" required />
                 </div>
                 <div class="form-group">
                   <label for="contactEmail" class="form-label">Email Address</label>
-                  <input type="email" id="contactEmail" class="form-input" placeholder="john@example.com" required />
+                  <input type="email" id="contactEmail" name="email" class="form-input" placeholder="john@example.com" required />
                 </div>
               </div>
 
               <div class="form-group">
                 <label for="contactSubject" class="form-label">Subject</label>
-                <input type="text" id="contactSubject" class="form-input" placeholder="Project inquiry" />
+                <input type="text" id="contactSubject" name="subject" class="form-input" placeholder="Project inquiry" />
               </div>
 
               <div class="form-group">
                 <label for="contactMessage" class="form-label">Message</label>
-                <textarea id="contactMessage" class="form-textarea" placeholder="Tell me about your project or idea..." required></textarea>
+                <textarea id="contactMessage" name="message" class="form-textarea" placeholder="Tell me about your project or idea..." required></textarea>
               </div>
 
               <button type="submit" class="btn btn-primary form-submit-btn">

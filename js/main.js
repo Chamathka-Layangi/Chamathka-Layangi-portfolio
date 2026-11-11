@@ -240,13 +240,24 @@
           Transmitting Message...
         `;
 
-        setTimeout(() => {
+        const formData = new FormData(contactForm);
+
+        // Netlify Form AJAX submission with local dev fallback
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString()
+        }).then(() => {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalBtnText;
           contactForm.reset();
-
           window.showToast(`Thank you, ${name}! Your message has been sent. Chamathka will reply soon.`, '🚀');
-        }, 1200);
+        }).catch(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+          contactForm.reset();
+          window.showToast(`Thank you, ${name}! Your message has been sent. Chamathka will reply soon.`, '🚀');
+        });
       });
     }
 

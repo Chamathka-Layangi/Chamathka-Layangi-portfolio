@@ -10,7 +10,8 @@ You do **NOT** need any complex build tools to view or use this portfolio.
 
 - **Option A (Instant Preview):** Double-click [`index.html`](./index.html) to open it right away in Google Chrome, Microsoft Edge, Mozilla Firefox, or Safari.
 - **Option B (VS Code Live Server):** Right-click [`index.html`](./index.html) in VS Code and select **"Open with Live Server"**.
-- **Option C (GitHub Pages):** Push this repository to GitHub, go to **Settings > Pages > Branch: `main` / root > Save**, and your portfolio is live worldwide!
+- **Option C (Netlify Deployment):** Drag and drop this project folder directly onto [Netlify Drop](https://app.netlify.com/drop) or link your GitHub repo. Pre-configured with [`netlify.toml`](./netlify.toml) and [`_redirects`](./_redirects) for caching headers, SPA routing, and native Netlify Form submissions!
+- **Option D (GitHub Pages):** Push this repository to GitHub, go to **Settings > Pages > Branch: `main` / root > Save**, and your portfolio is live worldwide!
 
 ---
 
@@ -30,9 +31,9 @@ You do **NOT** need any complex build tools to view or use this portfolio.
    - Fast project category filtering (`IoT`, `Web`, `Java`, `All`).
    - Quick theme toggle, email copy, and social links with full arrow-key and enter-key navigation.
 
-2. **Custom Glowing Mouse Cursor:**
-   - Soft electric blue glowing follower ring with smooth lerp physics.
-   - Micro-interactions that expand over buttons, cards, links, and inputs.
+2. **Soft Ambient Background Cursor Glow:**
+   - Standard browser mouse pointer remains clean and fully visible.
+   - A subtle, translucent electric blue radial gradient light smoothly follows behind mouse movements across the dark background.
    - Automatically disabled on touch screens for seamless mobile UX.
 
 3. **Dark / Light Mode Toggle:**
@@ -42,8 +43,9 @@ You do **NOT** need any complex build tools to view or use this portfolio.
 4. **Typing Animation in Hero:**
    - Smooth auto-typing job titles: *"First-Year Computing Undergraduate at SLIIT"*, *"IoT Enthusiast & Hardware Prototyper"*, *"Java OOP Developer & Systems Explorer"*.
 
-5. **3D Interactive Card Tilt & Neon Spotlight:**
-   - Cards dynamically tilt on mousemove with a radial cursor reflection and glowing neon borders.
+5. **Smooth Section Card Lift & Neon Glow:**
+   - When hovering over any section card, it smoothly elevates (`translateY(-6px)`) with a subtle glowing neon border and expanded drop shadow.
+   - Interactive radial spotlight reflection follows the cursor across card surfaces.
 
 6. **Interactive Project Playgrounds:**
    - **TerraPulse Smart Weather Station (IoT Showcase):** Live simulated sensor telemetry widget (Temperature, Humidity, MQ-135 Air Quality, Barometric Pressure) with real-time waveform canvas chart and pause/resume stream toggle.
@@ -102,7 +104,7 @@ In [`index.html`](./index.html), search for `YOUR_PROFILE_IMAGE_URL` (around lin
 <img
   src="YOUR_PROFILE_IMAGE_URL"
   onerror="this.onerror=null; this.src='assets/images/avatar-placeholder.svg';"
-  alt="Chamathka Layangi Profile"
+  alt="Chamathka Layangi"
   class="profile-avatar-img"
 />
 ```

@@ -4,56 +4,32 @@
    ========================================================================== */
 
 /* ==========================================================================
-   1. CUSTOM GLOWING MOUSE CURSOR
+   1. SOFT BACKGROUND CURSOR GLOW (TRANSLUCENT AMBIENT LIGHT FOLLOWER)
    ========================================================================== */
-.custom-cursor-dot {
+.cursor-ambient-glow {
   position: fixed;
   top: 0;
   left: 0;
-  width: 8px;
-  height: 8px;
-  background-color: var(--accent-electric);
+  width: 520px;
+  height: 520px;
   border-radius: 50%;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 0;
+  background: radial-gradient(circle, rgba(0, 240, 255, 0.13) 0%, rgba(0, 102, 255, 0.05) 42%, rgba(11, 15, 25, 0) 70%);
+  filter: blur(55px);
   transform: translate(-50%, -50%);
-  transition: width 0.15s ease-out, height 0.15s ease-out, background-color 0.15s ease-out;
-  box-shadow: 0 0 10px var(--accent-electric);
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+  will-change: transform, opacity;
 }
 
-.custom-cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid var(--accent-electric);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
-  transition: transform 0.18s ease-out, width 0.2s ease-out, height 0.2s ease-out, border-color 0.2s ease-out, background-color 0.2s ease-out;
-  opacity: 0.6;
-}
-
-/* Hover state on clickable items */
-body.cursor-hover .custom-cursor-ring {
-  width: 54px;
-  height: 54px;
-  border-color: var(--accent-electric);
-  background-color: rgba(0, 240, 255, 0.12);
-  opacity: 1;
-}
-
-body.cursor-hover .custom-cursor-dot {
-  width: 5px;
-  height: 5px;
-  background-color: #FFFFFF;
+[data-theme="light"] .cursor-ambient-glow {
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.1) 0%, rgba(2, 132, 199, 0.04) 42%, rgba(248, 250, 252, 0) 70%);
+  filter: blur(45px);
 }
 
 @media (pointer: coarse) {
-  .custom-cursor-dot,
-  .custom-cursor-ring {
+  .cursor-ambient-glow {
     display: none !important;
   }
 }
