@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <title>Chamathka Layangi | First-Year Computing Undergraduate &amp; IoT Developer</title>
+  <meta name="description" content="Portfolio of Chamathka Layangi - First-Year Computing Undergraduate at SLIIT. Passionate about Java OOP, IoT prototyping with ESP32, and futuristic software engineering." />
+  <meta name="keywords" content="Chamathka Layangi, SLIIT, Computing Undergraduate, Portfolio, IoT, ESP32, Java Developer, Software Engineering" />
+  <meta name="author" content="Chamathka Layangi" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Chamathka Layangi | Computing Undergraduate at SLIIT" />
+  <meta property="og:description" content="Bridging software logic with real-world physical systems. IoT Prototyping, Java OOP &amp; Modern Web Development." />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/glassmorphism.css" />
+  <link rel="stylesheet" href="css/components.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/avatar-placeholder.svg" />
+</head>
+<body>
+
+  <!-- Ambient Cyber Lighting Background Orbs -->
+  <div class="cyber-bg-glow">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+  </div>
+
+  <!-- Custom Glowing Cursor (Follower + Ring) -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-ring"></div>
+
+  <!-- ==========================================================================
+       1. NAVBAR: Sticky Glassmorphism Floating Dock
+       ========================================================================== -->
+  <header class="navbar-dock">
+    <nav class="navbar-inner glass-dock" aria-label="Main Navigation">
+      <a href="#home" class="nav-brand" aria-label="Chamathka Layangi Home">
+        <div class="brand-badge">CL</div>
+        <div class="brand-name">
+          <span>Chamathka Layangi</span>
+          <span>SLIIT • COMPUTING</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links" id="navLinksList">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Utilities: Ctrl+K Command Palette & Theme Switcher -->
+      <div class="nav-utilities">
+        <button class="cmd-palette-trigger" title="Open Command Palette (Ctrl + K)" aria-label="Open Command Palette">
+          <span>Search</span>
+          <span class="kbd-shortcut">Ctrl K</span>
+        </button>
+
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation drawer">
+          ☰
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+       2. HOME (HERO SECTION)
+       ========================================================================== -->
+  <main>
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Left Column -->
+          <div class="hero-content-column reveal-item">
+            <div class="hero-status-badge">
+              <span class="status-dot"></span>
+              <span>SLIIT Undergraduate • Available for Collaborations</span>
+            </div>
+
+            <h1 class="hero-main-heading">
+              Hi, I'm <span class="gradient-text">Chamathka Layangi</span>
+            </h1>
+
+            <div class="hero-typing-wrapper">
+              <h2 class="hero-subheading">
+                <span id="typingText" class="typing-text">First-Year Computing Undergraduate at SLIIT</span>
+                <span class="typing-cursor"></span>
+              </h2>
+            </div>
+
+            <p class="hero-bio">
+              Passionate about bridging software logic with real-world physical systems. I love turning creative ideas into functional web apps and smart IoT solutions.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <span>View Projects</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+
+              <a href="#contact" class="btn btn-secondary">
+                <span>Let's Connect</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+              </a>
+
+              <button class="btn btn-secondary btn-sm" onclick="window.openCommandPalette()" title="Press Ctrl + K">
+                <span>Quick Actions</span>
+                <span class="kbd-shortcut">⌘K</span>
+              </button>
+            </div>
+
+            <div class="hero-quick-stats">
+              <div class="stat-item">
+                <span class="stat-num electric-text">TOP 3</span>
+                <span class="stat-label">TerraPulse IoT Award</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">10+</span>
+                <span class="stat-label">Sensors &amp; Microcontrollers</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">SLIIT</span>
+                <span class="stat-label">BSc (Hons) IT Undergraduate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Right Column: Glowing Profile Halo with Easy Image Replacement -->
+          <div class="hero-avatar-column reveal-scale delay-200">
+            <div class="avatar-halo-wrapper">
+              <!-- Animated Electric Blue Gradient Ring -->
+              <div class="animated-gradient-ring"></div>
+
+              <!-- Profile Image Placeholder Frame -->
+              <div class="avatar-inner-frame">
+                <!-- Replace 'YOUR_PROFILE_IMAGE_URL' with your actual image path or URL -->
+                <img
+                  src="YOUR_PROFILE_IMAGE_URL"
+                  onerror="this.onerror=null; this.src='assets/images/avatar-placeholder.svg';"
+                  alt="Chamathka Layangi - Computing Undergraduate Profile"
+                  class="profile-avatar-img"
+                />
+              </div>
+
+              <!-- Floating Micro Badges -->
+              <div class="floating-chip chip-1">
+                <span>⚡</span> ESP32 Prototyping
+              </div>
+              <div class="floating-chip chip-2">
+                <span>☕</span> Java OOP
+              </div>
+              <div class="floating-chip chip-3">
+                <span>🏆</span> Top 3 TerraPulse
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. ABOUT ME SECTION
+         ========================================================================== -->
+    <section class="about-section" id="about">
+      <div class="container">
+        
+        <div class="section-header center reveal-item">
+          <span class="section-tag">About Chamathka</span>
+          <h2 class="section-title">Bridging Code with Physical Reality</h2>
+          <p class="section-desc">
+            A fusion of curiosity, logical software engineering, and hands-on microcontroller circuit design.
+          </p>
+        </div>
+
+        <!-- Narrative Cards -->
+        <div class="about-intro-grid">
+          <div class="about-narrative-card glass-panel tilt-card reveal-item">
+            <div class="card-spotlight"></div>
+            <h3><span>👋</span> Personal Introduction</h3>
+            <p>
+              Hello! I’m <strong>Chamathka Layangi</strong>, a first-year computing undergraduate at SLIIT. I blend logical problem-solving with creative engineering to build technology that solves real-world challenges.
+            </p>
+            <p>
+              I believe modern computer science thrives at the intersection of robust backend algorithms and intelligent physical hardware that senses and responds to its surroundings.
+            </p>
+          </div>
+
+          <div class="about-narrative-card glass-panel tilt-card reveal-item delay-200">
+            <div class="card-spotlight"></div>
+            <h3><span>🚀</span> My Journey in IT</h3>
+            <p>
+              My IT journey began with a curiosity about hardware-software communication. At SLIIT, I complement core studies in Java OOP and network architecture with hands-on IoT prototyping—using ESP32 microcontrollers and sensors to create smart, connected systems.
+            </p>
+            <p>
+              From soldering circuit leads and decoding analog voltage signals to architecting clean object-oriented class hierarchies, every project fuels my passion for continuous engineering growth.
+            </p>
+          </div>
+        </div>
+
+        <!-- Interactive Timeline Roadmap -->
+        <div class="section-header center reveal-item" style="margin-top: 50px; margin-bottom: 20px;">
+          <span class="section-tag">Milestone Roadmap</span>
+          <h3 style="font-size: 1.8rem;">Academic &amp; Prototyping Milestones</h3>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <!-- Timeline 1 -->
+          <div class="timeline-item reveal-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel tilt-card">
+              <div class="card-spotlight"></div>
+              <span class="timeline-date">2026 — PRESENT</span>
+              <h4 class="timeline-title">BSc (Hons) in Information Technology at SLIIT</h4>
+              <p class="timeline-text">
+                Commenced rigorous first-year undergraduate computing curriculum. Mastering Software Engineering Principles, Java OOP design patterns, Computer Networks, and Database Systems.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline 2 -->
+          <div class="timeline-item reveal-item delay-200">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel tilt-card">
+              <div class="card-spotlight"></div>
+              <span class="timeline-date">HARDWARE EXPEDITION</span>
+              <h4 class="timeline-title">ESP32 &amp; Sensor Fusion Prototyping</h4>
+              <p class="timeline-text">
+                Spearheaded comprehensive circuit prototyping using ESP32, MQ-135 air quality sensors, DHT22 temperature modules, BMP180 barometric monitors, and rain detection systems.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline 3 -->
+          <div class="timeline-item reveal-item delay-300">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel tilt-card">
+              <div class="card-spotlight"></div>
+              <span class="timeline-date">AWARD RECOGNITION</span>
+              <h4 class="timeline-title">Secured TOP 3 Winner — TerraPulse Project</h4>
+              <p class="timeline-text">
+                Demonstrated end-to-end functionality of TerraPulse Smart Environmental Reporting at the SLIIT Computing showcase, receiving Top 3 distinction from university evaluators.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline 4 -->
+          <div class="timeline-item reveal-item delay-400">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel tilt-card">
+              <div class="card-spotlight"></div>
+              <span class="timeline-date">CONTINUOUS GROWTH</span>
+              <h4 class="timeline-title">Full-Stack Logic &amp; Cloud Telemetry</h4>
+              <p class="timeline-text">
+                Integrating physical sensor telemetry with cloud platforms (ThingSpeak API), responsive web dashboards, and enterprise-grade Java backend systems.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Grid for Interests & Strengths -->
+        <div class="bento-about-grid">
+          
+          <!-- Personal Interests -->
+          <div class="glass-panel tilt-card pill-card reveal-item" style="padding: 28px;">
+            <div class="card-spotlight"></div>
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+              <span style="font-size: 1.5rem;">💡</span>
+              <h4 style="font-size: 1.3rem;">Personal Interests</h4>
+            </div>
+            <div class="bento-subgrid">
+              <div class="pill-card glass-panel">
+                <span class="pill-icon">📡</span>
+                <span class="pill-title">IoT &amp; Embedded Systems</span>
+                <span class="pill-desc">Interfacing ESP32, microcontrollers, and real-time sensory inputs.</span>
+              </div>
+              <div class="pill-card glass-panel">
+                <span class="pill-icon">💻</span>
+                <span class="pill-title">Software Development</span>
+                <span class="pill-desc">Clean Java OOP logic, algorithm structuring, and system design.</span>
+              </div>
+              <div class="pill-card glass-panel">
+                <span class="pill-icon">🎨</span>
+                <span class="pill-title">Digital Crafting &amp; UI/UX</span>
+                <span class="pill-desc">Creating intuitive, futuristic, and accessible web experiences.</span>
+              </div>
+              <div class="pill-card glass-panel">
+                <span class="pill-icon">📚</span>
+                <span class="pill-title">Continuous Learning</span>
+                <span class="pill-desc">Exploring emerging tech, network security, and cloud telemetries.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Personal Strengths -->
+          <div class="glass-panel tilt-card pill-card reveal-item delay-200" style="padding: 28px;">
+            <div class="card-spotlight"></div>
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+              <span style="font-size: 1.5rem;">⚡</span>
+              <h4 style="font-size: 1.3rem;">Personal Strengths</h4>
+            </div>
+            <div class="bento-subgrid">
+              <div class="pill-card glass-panel">
+                <span class="pill-icon">🧠</span>
+                <span class="pill-title">Analytical Thinking</span>
+                <span class="pill-desc">Deconstructing complex bugs down to circuit signals &amp; logic gates.</span>
+              </div>
+              <div class="pill-card glass-panel">
+                <span class="pill-icon">🔄</span>
+                <span class="pill-title">Adaptability</span>
+                <span class="pill-desc">Rapidly acquiring new tools, frameworks, and engineering standards.</span>
+              </div>
+              <div class="pill-card glass-panel">
+                <span class="pill-icon">🤝</span>
+                <span class="pill-title">Collaboration</span>
+                <span class="pill-desc">Thriving in diverse team sprints, academic hackathons &amp; peer reviews.</span>
+              </div>
+              <div class="pill-card glass-panel">
+                <span class="pill-icon">📢</span>
+                <span class="pill-title">Clear Communication</span>
+                <span class="pill-desc">Translating deep technical concepts into polished presentations &amp; docs.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. SKILLS SECTION
+         ========================================================================== -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        
+        <div class="section-header center reveal-item">
+          <span class="section-tag">Capabilities</span>
+          <h2 class="section-title">Technical Skills &amp; Expertise</h2>
+          <p class="section-desc">
+            A comprehensive matrix of programming languages, hardware sensors, development platforms, and core engineering competencies.
+          </p>
+        </div>
+
+        <!-- Skills Filter / Category Pills -->
+        <div class="skills-category-tabs reveal-item">
+          <button class="skill-tab-btn active" data-skill-tab="all">All Skills</button>
+          <button class="skill-tab-btn" data-skill-tab="hardware">Hardware &amp; IoT</button>
+          <button class="skill-tab-btn" data-skill-tab="languages">Languages</button>
+          <button class="skill-tab-btn" data-skill-tab="tools">Tools &amp; Platforms</button>
+          <button class="skill-tab-btn" data-skill-tab="core">Core Competencies</button>
+        </div>
+
+        <!-- Skills Grid Cards -->
+        <div class="skills-grid" id="skillsGridContainer">
+          
+          <!-- Programming Languages -->
+          <div class="skill-card glass-panel tilt-card reveal-item" data-group="languages">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-name-wrap">
+                <div class="skill-icon-box">☕</div>
+                <div>
+                  <h4 class="skill-name">Java</h4>
+                  <span class="skill-category-tag">PROGRAMMING LANGUAGE</span>
+                </div>
+              </div>
+              <span class="skill-level-badge">OOP &amp; Logic</span>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill" data-width="88%"></div>
+            </div>
+            <p class="skill-desc">Object-Oriented Programming (OOP), encapsulation, polymorphism, exception handling, data structures, and console applications.</p>
+          </div>
+
+          <!-- Hardware: ESP32 -->
+          <div class="skill-card glass-panel tilt-card reveal-item" data-group="hardware">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-name-wrap">
+                <div class="skill-icon-box">⚡</div>
+                <div>
+                  <h4 class="skill-name">ESP32 Microcontroller</h4>
+                  <span class="skill-category-tag">HARDWARE &amp; IOT</span>
+                </div>
+              </div>
+              <span class="skill-level-badge">Core Rig</span>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill" data-width="92%"></div>
+            </div>
+            <p class="skill-desc">Dual-core processing, Wi-Fi / BLE integration, GPIO pin management, ADC conversions, and serial telemetry transmission.</p>
+          </div>
+
+          <!-- Hardware: MQ135 Air Quality -->
+          <div class="skill-card glass-panel tilt-card reveal-item" data-group="hardware">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-name-wrap">
+                <div class="skill-icon-box">🍃</div>
+                <div>
+                  <h4 class="skill-name">MQ-135 Gas Sensor</h4>
+                  <span class="skill-category-tag">AIR QUALITY MONITORING</span>
+                </div>
+              </div>
+              <span class="skill-level-badge">Sensor Array</span>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill" data-width="86%"></div>
+            </div>
+            <p class="skill-desc">Detecting airborne contaminants, CO2, smoke, and NH3 with resistance curve calibration and threshold alerting.</p>
+          </div>
+
+          <!-- Hardware: DHT22 -->
+          <div class="skill-card glass-panel tilt-card reveal-item" data-group="hardware">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-name-wrap">
+                <div class="skill-icon-box">🌡️</div>
+                <div>
+                  <h4 class="skill-name">DHT22 Temp &amp; Humidity</h4>
+                  <span class="skill-category-tag">CLIMATE SENSING</span>
+                </div>
+              </div>
+              <span class="skill-level-badge">Digital Protocol</span>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill" data-width="90%"></div>
+            </div>
+            <p class="skill-desc">High-precision calibrated digital signal reading for ambient temperatures (-40 to 80°C) and relative humidity (0-100%).</p>
+          </div>
+
+          <!-- Hardware: BMP180 -->
+          <div class="skill-card glass-panel tilt-card reveal-item" data-group="hardware">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-name-wrap">
+                <div class="skill-icon-box">⏱️</div>
+                <div>
+                  <h4 class="skill-name">BMP180 Pressure Sensor</h4>
+                  <span class="skill-category-tag">BAROMETRIC TELEMETRY</span>
+                </div>
+              </div>
+              <span class="skill-level-badge">I2C Protocol</span>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill" data-width="85%"></div>
+            </div>
+            <p class="skill-desc">I2C bus interfacing for atmospheric pressure calculations, weather trend forecasts, and altitude estimation.</p>
+          </div>
+
+          <!-- Hardware: Analog Rain Sensor -->
+          <div class="skill-card glass-panel tilt-card reveal-item" data-group="hardware">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-name-wrap">
+                <div class="skill-icon-box">🌧️</div>
+                <div>
+                  <h4 class="skill-name">Analog Rain Sensor</h4>
+                  <span class="skill-category-tag">WEATHER DETECTION</span>
+                </div>
+              </div>
+              <span class="skill-level-badge">Analog / Digital</span>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill" data-width="88%"></div>
+            </div>
+            <p class="skill-desc">Precipitation intensity reading using nickel track conductive pads with LM393 comparator calibration.</p>
+          </div>
+
+          <!-- Hardware: HC-SR04 Ultrasonic Sensor -->
+          <div class="skill-card glass-panel tilt-card reveal-item" data-group="hardware">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-name-wrap">
+                <div class="skill-icon-box">📡</div>
+                <div>
+                  <h4 class="skill-name">HC-SR04 Ultrasonic</h4>
+                  <span class="skill-category-tag">DISTANCE &amp; RANGE</span>
+                </div>
+              </div>
+              <span class="skill-level-badge">Sonic Echo</span>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill" data-width="87%"></div>
+            </div>
+            <p class="skill-desc">Non-contact distance measurement (2cm to 400cm) utilizing trigger pulse timings and sonic wave reflections.</p>
+          </div>
+
+          <!-- Hardware: Soil Moisture Sensor -->
+          <div class="skill-card glass-panel tilt-card reveal-item" data-group="hardware">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-name-wrap">
+                <div class="skill-icon-box">🌱</div>
+                <div>
+                  <h4 class="skill-name">Soil Moisture Sensor</h4>
+                  <span class="skill-category-tag">AGRICULTURAL IOT</span>
+                </div>
+              </div>
+              <span class="skill-level-badge">Conductive Probe</span>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill" data-width="84%"></div>
+            </div>
+            <p class="skill-desc">Ground dielectric constant &amp; volumetric water content assessment for automated irrigation and soil health.</p>
+          </div>
+
+          <!-- Hardware: LDR & Hall Effect -->
+          <div class="skill-card glass-panel tilt-card reveal-item" data-group="hardware">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-name-wrap">
+                <div class="skill-icon-box">🧲</div>
+                <div>
+                  <h4 class="skill-name">LDR &amp; A3144 Hall Effect</h4>
+                  <span class="skill-category-tag">OPTICAL &amp; MAGNETIC</span>
+                </div>
+              </div>
+              <span class="skill-level-badge">Discrete Sensors</span>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill" data-width="85%"></div>
+            </div>
+            <p class="skill-desc">Photoresistor ambient lux measurement coupled with magnetic field rotational sensing for anemometer calculations.</p>
+          </div>
+
+          <!-- Cloud: ThingSpeak -->
+          <div class="skill-card glass-panel tilt-card reveal-item" data-group="hardware">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-name-wrap">
+                <div class="skill-icon-box">☁️</div>
+                <div>
+                  <h4 class="skill-name">ThingSpeak Cloud</h4>
+                  <span class="skill-category-tag">IOT CLOUD PLATFORM</span>
+                </div>
+              </div>
+              <span class="skill-level-badge">Cloud Sync</span>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill" data-width="88%"></div>
+            </div>
+            <p class="skill-desc">REST API channels, HTTP POST data streaming from ESP32, and cloud-driven data visualization feeds.</p>
+          </div>
+
+          <!-- Tools: GitHub & VS Code -->
+          <div class="skill-card glass-panel tilt-card reveal-item" data-group="tools">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-name-wrap">
+                <div class="skill-icon-box">🛠️</div>
+                <div>
+                  <h4 class="skill-name">GitHub &amp; VS Code</h4>
+                  <span class="skill-category-tag">DEVELOPER TOOLCHAIN</span>
+                </div>
+              </div>
+              <span class="skill-level-badge">Workflow</span>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill" data-width="90%"></div>
+            </div>
+            <p class="skill-desc">Git version control, feature branches, pull requests, PlatformIO Arduino IDE integration, and linting.</p>
+          </div>
+
+          <!-- Tools: Microsoft Word Tech Docs -->
+          <div class="skill-card glass-panel tilt-card reveal-item" data-group="tools">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-name-wrap">
+                <div class="skill-icon-box">📄</div>
+                <div>
+                  <h4 class="skill-name">Microsoft Word</h4>
+                  <span class="skill-category-tag">TECHNICAL DOCUMENTATION</span>
+                </div>
+              </div>
+              <span class="skill-level-badge">Advanced Layout</span>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill" data-width="95%"></div>
+            </div>
+            <p class="skill-desc">Advanced formatting, formal IEEE engineering report drafting, automated table of contents, and circuit schematics layout.</p>
+          </div>
+
+          <!-- Core: Problem Solving & Circuit Integration -->
+          <div class="skill-card glass-panel tilt-card reveal-item" data-group="core">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-name-wrap">
+                <div class="skill-icon-box">🧩</div>
+                <div>
+                  <h4 class="skill-name">Circuit &amp; System Integration</h4>
+                  <span class="skill-category-tag">CORE COMPETENCY</span>
+                </div>
+              </div>
+              <span class="skill-level-badge">Engineering</span>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill" data-width="89%"></div>
+            </div>
+            <p class="skill-desc">Breadboard prototyping, voltage regulation, resistor divider circuits, schematic debugging, and UI/UX layout design.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. FEATURED PROJECTS (BENTO GRID LAYOUT)
+         ========================================================================== -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        
+        <div class="section-header center reveal-item">
+          <span class="section-tag">Portfolio Showcase</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-desc">
+            Explore interactive Bento Grid showcases featuring embedded hardware engineering, responsive web applications, and object-oriented software systems.
+          </p>
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div class="project-filters reveal-item">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="iot">IoT &amp; Embedded</button>
+          <button class="filter-btn" data-filter="web">Web Applications</button>
+          <button class="filter-btn" data-filter="java">Java OOP Systems</button>
+        </div>
+
+        <!-- Bento Grid Cards Container -->
+        <div class="projects-bento-grid">
+          
+          <!-- PROJECT 1: TerraPulse Smart Weather Dashboard (IoT Showcase - Large Bento) -->
+          <div class="bento-card bento-card-large glass-panel tilt-card reveal-item" data-category="iot">
+            <div class="card-spotlight"></div>
+            
+            <div class="bento-card-banner">
+              <img src="assets/images/project-terrapulse.svg" alt="TerraPulse Smart Weather Station Dashboard" />
+            </div>
+
+            <div class="bento-card-body">
+              <div class="project-tag-list">
+                <span class="project-tag">ESP32</span>
+                <span class="project-tag">MQ-135</span>
+                <span class="project-tag">DHT22</span>
+                <span class="project-tag">BMP180</span>
+                <span class="project-tag">Rain Sensor</span>
+                <span class="project-tag">ThingSpeak Cloud</span>
+                <span class="project-tag" style="background: rgba(0,240,255,0.15); color: var(--accent-electric); border-color: var(--accent-electric);">★ TOP 3 WINNER</span>
+              </div>
+
+              <h3 class="project-title">TerraPulse — Smart IoT Environmental Telemetry</h3>
+              <p class="project-summary">
+                An end-to-end intelligent environmental telemetry system designed for real-time climatic and air quality monitoring. Driven by an ESP32 microcontroller, TerraPulse captures multi-sensor telemetry—ambient temperature, humidity, air quality index (CO2/smoke/NH3 via MQ-135), barometric pressure (BMP180), and precipitation states—and broadcasts the live stream to the cloud for real-time web telemetry.
+              </p>
+
+              <!-- Live Telemetry Interactive Widget -->
+              <div class="telemetry-widget-card">
+                <div class="telemetry-header">
+                  <div class="telemetry-title">
+                    <span>📡</span>
+                    <span>LIVE ESP32 SENSOR STREAM (SIMULATED TELEMETRY)</span>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <span class="telemetry-status-pill" id="telemetryStatus">
+                      <span class="status-dot"></span> LIVE
+                    </span>
+                    <button class="telemetry-sim-btn" id="simToggleBtn">Pause Stream</button>
+                  </div>
+                </div>
+
+                <div class="telemetry-metrics-grid">
+                  <div class="telemetry-metric-tile">
+                    <span class="metric-label">TEMPERATURE (DHT22)</span>
+                    <span class="metric-value" id="telemetryTemp">28.4 °C</span>
+                    <span class="metric-sub">Optimal Range</span>
+                  </div>
+                  <div class="telemetry-metric-tile">
+                    <span class="metric-label">HUMIDITY</span>
+                    <span class="metric-value" id="telemetryHum">67.8 %</span>
+                    <span class="metric-sub">Nominal</span>
+                  </div>
+                  <div class="telemetry-metric-tile">
+                    <span class="metric-label">AIR QUALITY (MQ135)</span>
+                    <span class="metric-value" id="telemetryAqi" style="color: #10B981;">42 AQI</span>
+                    <span class="metric-sub">Good Air Quality</span>
+                  </div>
+                  <div class="telemetry-metric-tile">
+                    <span class="metric-label">ATM PRESSURE</span>
+                    <span class="metric-value" id="telemetryPress">1013.2 hPa</span>
+                    <span class="metric-sub">Stable Front</span>
+                  </div>
+                </div>
+
+                <div class="telemetry-canvas-wrap">
+                  <canvas id="telemetryCanvas" class="telemetry-canvas"></canvas>
+                </div>
+              </div>
+
+              <div class="project-actions" style="margin-top: 24px;">
+                <a href="#" class="btn btn-primary btn-sm" onclick="window.openLightbox('assets/images/certificate-terrapulse.svg', 'TerraPulse Top 3 Certificate', 'Awarded for exceptional IoT hardware prototyping and cloud telemetry.'); return false;">
+                  <span>View Award Certificate</span>
+                </a>
+                <a href="https://github.com/YOUR_PROFILE" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  <span>GitHub Repository</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: Academic Task Manager (Web Showcase - Medium Bento) -->
+          <div class="bento-card bento-card-medium glass-panel tilt-card reveal-item" data-category="web">
+            <div class="card-spotlight"></div>
+
+            <div class="bento-card-banner" style="height: 220px;">
+              <img src="assets/images/project-taskmanager.svg" alt="Academic Task Manager Web Application" />
+            </div>
+
+            <div class="bento-card-body">
+              <div class="project-tag-list">
+                <span class="project-tag">HTML5 / CSS3</span>
+                <span class="project-tag">JavaScript ES6</span>
+                <span class="project-tag">Local Storage</span>
+                <span class="project-tag">SLIIT Curriculum</span>
+              </div>
+
+              <h3 class="project-title">Academic Task Manager</h3>
+              <p class="project-summary">
+                A streamlined web-based productivity application tailored for SLIIT computing students. Helps track module assignments, deadlines, lab deliverables, and course progress with priority badges and dynamic local persistence.
+              </p>
+
+              <!-- Interactive Task Manager Mini-Demo -->
+              <div class="taskmanager-widget">
+                <div class="task-input-bar">
+                  <input type="text" id="taskMiniInput" class="task-quick-input" placeholder="Type a new academic task and press Enter..." />
+                  <button id="taskAddBtn" class="task-add-btn">+ Add</button>
+                </div>
+                <div class="task-items-list" id="taskMiniList">
+                  <div class="task-mini-item done">
+                    <div class="task-check-left">
+                      <div class="task-checkbox">✓</div>
+                      <span class="task-text">Implement Polymorphic Sensor Interface (Java)</span>
+                    </div>
+                    <span class="task-badge-tag">IT1050</span>
+                  </div>
+                  <div class="task-mini-item done">
+                    <div class="task-check-left">
+                      <div class="task-checkbox">✓</div>
+                      <span class="task-text">CIDR Subnetting &amp; Packet Tracer Lab</span>
+                    </div>
+                    <span class="task-badge-tag">IT1040</span>
+                  </div>
+                  <div class="task-mini-item">
+                    <div class="task-check-left">
+                      <div class="task-checkbox"></div>
+                      <span class="task-text">TerraPulse Final Technical Documentation Report</span>
+                    </div>
+                    <span class="task-badge-tag">IN REVIEW</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-actions" style="margin-top: 24px;">
+                <a href="#" class="btn btn-secondary btn-sm" onclick="window.showToast('Live Web Demo Active in Bento Card!'); return false;">
+                  <span>Live Interactive Card</span>
+                </a>
+                <a href="https://github.com/YOUR_PROFILE" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  <span>GitHub Repository</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: Java Library / Console System (Java Showcase - Medium Bento) -->
+          <div class="bento-card bento-card-medium glass-panel tilt-card reveal-item delay-200" data-category="java">
+            <div class="card-spotlight"></div>
+
+            <div class="bento-card-banner" style="height: 220px;">
+              <img src="assets/images/project-javalibrary.svg" alt="Java Library Management Console System" />
+            </div>
+
+            <div class="bento-card-body">
+              <div class="project-tag-list">
+                <span class="project-tag">Java 21</span>
+                <span class="project-tag">OOP Architecture</span>
+                <span class="project-tag">Polymorphism</span>
+                <span class="project-tag">Exception Handling</span>
+              </div>
+
+              <h3 class="project-title">Java Library &amp; Console Inventory System</h3>
+              <p class="project-summary">
+                A robust Java terminal and inventory system built strictly according to Object-Oriented Programming (OOP) paradigms. Enforces data encapsulation, inheritance hierarchy, polymorphic loan handlers, custom checked exceptions, and audit file logging.
+              </p>
+
+              <!-- Interactive Terminal Simulator -->
+              <div class="terminal-simulator-card">
+                <div class="terminal-sim-header">
+                  <div class="terminal-dots">
+                    <span class="t-dot t-red"></span>
+                    <span class="t-dot t-yellow"></span>
+                    <span class="t-dot t-green"></span>
+                  </div>
+                  <span class="terminal-title-text">Interactive Java Shell</span>
+                  <span style="font-size: 0.7rem; color: #10B981;">● ONLINE</span>
+                </div>
+
+                <div class="terminal-quick-actions">
+                  <button class="term-btn" data-cmd="list">list</button>
+                  <button class="term-btn" data-cmd="borrow 101">borrow 101</button>
+                  <button class="term-btn" data-cmd="return 101">return 101</button>
+                  <button class="term-btn" data-cmd="stats">stats</button>
+                  <button class="term-btn" data-cmd="help">help</button>
+                </div>
+
+                <div class="terminal-sim-body" id="terminalSimBody">
+                  <div class="term-line-output term-line-cyan">=== Java OOP Library System v2.4 Initialized ===</div>
+                  <div class="term-line-output">Ready. Click quick action buttons above or type below:</div>
+                </div>
+
+                <div class="term-input-row">
+                  <span class="term-prompt-prefix">chamathka@sliit:~$</span>
+                  <input type="text" id="termTextInput" class="term-text-input" placeholder="Type 'help' or command..." autocomplete="off" />
+                </div>
+              </div>
+
+              <div class="project-actions" style="margin-top: 24px;">
+                <a href="#" class="btn btn-secondary btn-sm" onclick="window.showToast('Run commands inside the terminal above!'); return false;">
+                  <span>Try Terminal Demo</span>
+                </a>
+                <a href="https://github.com/YOUR_PROFILE" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  <span>GitHub Repository</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. EDUCATION & EXPERIENCE SECTION
+         ========================================================================== -->
+    <section class="education-section" id="education">
+      <div class="container">
+        
+        <div class="section-header center reveal-item">
+          <span class="section-tag">Academic Journey</span>
+          <h2 class="section-title">Education &amp; Achievements</h2>
+          <p class="section-desc">
+            Foundations in computing theory, hardware design, and academic distinction at Sri Lanka Institute of Information Technology.
+          </p>
+        </div>
+
+        <!-- Degree Card & Honors Grid -->
+        <div class="edu-grid">
+          
+          <!-- Degree Card -->
+          <div class="edu-card glass-panel tilt-card reveal-item">
+            <div class="card-spotlight"></div>
+            <div class="edu-institution-badge">
+              <span>🏛️</span>
+              <span>SLIIT — MALABE CAMPUS</span>
+            </div>
+            <h3 class="edu-degree">BSc (Hons) in Information Technology / Computing</h3>
+            <span class="edu-period">First-Year Undergraduate (2026 – Present)</span>
+            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.98rem;">
+              Enrolled in the flagship Computing program. Rigorous immersion into computer science foundations, algorithms, object-oriented software engineering, computer network protocols, and database design.
+            </p>
+            <div class="edu-modules-list">
+              <span class="module-pill">Software Engineering Principles</span>
+              <span class="module-pill">Java OOP Logic</span>
+              <span class="module-pill">Network Architecture</span>
+              <span class="module-pill">Systems Analysis &amp; Design</span>
+              <span class="module-pill">Discrete Mathematics</span>
+            </div>
+          </div>
+
+          <!-- Academic Achievements Card -->
+          <div class="edu-card glass-panel tilt-card reveal-item delay-200">
+            <div class="card-spotlight"></div>
+            <div class="edu-institution-badge">
+              <span>🏆</span>
+              <span>HONORS &amp; DISTINCTIONS</span>
+            </div>
+            <h3 class="edu-degree">Top 3 Winner — TerraPulse Project</h3>
+            <span class="edu-period">Computing &amp; IoT Project Symposium Showcase</span>
+            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.98rem;">
+              Distinguished with Top 3 placement among first-year cohorts for architecting the TerraPulse Smart IoT Environmental Station. Commended for seamless sensor integration, circuit stability, and clean telemetry synchronization.
+            </p>
+            <div class="edu-modules-list">
+              <span class="module-pill" style="border-color: rgba(0,240,255,0.4); color: var(--accent-electric);">★ Top 3 Podium</span>
+              <span class="module-pill">Hardware-Software Fusion</span>
+              <span class="module-pill">Live Demonstration</span>
+              <span class="module-pill">Faculty Commendation</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Certifications Showcase Frame with Image Placeholder -->
+        <div class="cert-showcase-container glass-panel reveal-item">
+          <div>
+            <div class="section-tag">Official Certification</div>
+            <h3 style="font-size: 1.8rem; margin-bottom: 12px;">TerraPulse Smart IoT Achievement</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+              Secured Top 3 recognition for the TerraPulse Smart Weather Reporting Project. Evaluated on hardware circuit design, sensor accuracy, and web telemetry integration.
+            </p>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <button class="btn btn-primary btn-sm" onclick="window.openLightbox('assets/images/certificate-terrapulse.svg', 'Certificate of Achievement', 'Top 3 Winner in Computing &amp; IoT Project Showcase at SLIIT');">
+                <span>Zoom Certificate</span>
+              </button>
+              <button class="btn btn-secondary btn-sm" onclick="window.showToast('Replace src in index.html with YOUR_CERTIFICATE_IMAGE_URL');">
+                <span>Upload Instructions</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Certificate Image Frame with Easy Image Replacement -->
+          <div class="cert-preview-frame">
+            <!-- Replace 'YOUR_CERTIFICATE_IMAGE_URL' with your real certificate image path -->
+            <img
+              src="YOUR_CERTIFICATE_IMAGE_URL"
+              onerror="this.onerror=null; this.src='assets/images/certificate-terrapulse.svg';"
+              alt="TerraPulse Top 3 Winner Certificate"
+            />
+            <div class="cert-zoom-overlay">
+              <span>🔍 Click to View Certificate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Workshops & Events Section with 3 Grid Placeholders -->
+        <div class="section-header center reveal-item" style="margin-top: 50px;">
+          <span class="section-tag">Hands-On Showcases</span>
+          <h3 style="font-size: 1.8rem;">Workshops &amp; Showcase Events</h3>
+          <p class="section-desc">
+            Demonstrated the end-to-end functionality of TerraPulse via ESP32 to instant web visualization.
+          </p>
+        </div>
+
+        <div class="workshops-grid">
+          
+          <!-- Workshop Photo 1 -->
+          <div class="workshop-photo-card glass-panel tilt-card reveal-item">
+            <div class="card-spotlight"></div>
+            <div class="workshop-img-wrap">
+              <!-- Replace 'YOUR_EVENT_PHOTO_1' with actual photo -->
+              <img
+                src="YOUR_EVENT_PHOTO_1"
+                onerror="this.onerror=null; this.src='assets/images/event-photo-1.svg';"
+                alt="TerraPulse Circuit &amp; Sensor Assembly Showcase"
+              />
+            </div>
+            <div class="workshop-caption">
+              <strong>Hardware Prototyping Workshop</strong>
+              Hands-on circuit assembly, breadboard wiring, and sensor array calibration using ESP32.
+            </div>
+          </div>
+
+          <!-- Workshop Photo 2 -->
+          <div class="workshop-photo-card glass-panel tilt-card reveal-item delay-200">
+            <div class="card-spotlight"></div>
+            <div class="workshop-img-wrap">
+              <!-- Replace 'YOUR_EVENT_PHOTO_2' with actual photo -->
+              <img
+                src="YOUR_EVENT_PHOTO_2"
+                onerror="this.onerror=null; this.src='assets/images/event-photo-2.svg';"
+                alt="SLIIT Computing Project Showcase Presentation"
+              />
+            </div>
+            <div class="workshop-caption">
+              <strong>SLIIT Academic Project Showcase</strong>
+              Presenting system architecture and sensor fusion telemetry to faculty panel.
+            </div>
+          </div>
+
+          <!-- Workshop Photo 3 -->
+          <div class="workshop-photo-card glass-panel tilt-card reveal-item delay-300">
+            <div class="card-spotlight"></div>
+            <div class="workshop-img-wrap">
+              <!-- Replace 'YOUR_EVENT_PHOTO_3' with actual photo -->
+              <img
+                src="YOUR_EVENT_PHOTO_3"
+                onerror="this.onerror=null; this.src='assets/images/event-photo-3.svg';"
+                alt="Real-time Web Telemetry Live Demo"
+              />
+            </div>
+            <div class="workshop-caption">
+              <strong>Live Telemetry Cloud Streaming</strong>
+              Demonstrating the end-to-end functionality of TerraPulse via ESP32 to instant web visualization.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. CONTACT SECTION (EXACT DESIGN MATCH TO DRIBBBLE SPECIFICATION)
+         ========================================================================== -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        
+        <div class="contact-layout-grid">
+          
+          <!-- Contact Left Info Column -->
+          <div class="contact-info-col reveal-item">
+            <span class="section-tag">GET IN TOUCH</span>
+            <h2 class="section-title">Let's Work Together</h2>
+            <p class="contact-subtext">
+              I am always open to connecting with fellow undergraduates, tech professionals, and mentors. Whether you want to discuss an academic project, collaborate on an IoT initiative, or just say hello, feel free to reach out!
+            </p>
+
+            <div class="contact-cards-stack">
+              <!-- Email Card -->
+              <div class="contact-detail-card">
+                <div class="contact-icon-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-meta">
+                  <span class="contact-label">Email</span>
+                  <div class="contact-value">
+                    <a href="mailto:your.email@example.com">chamathka.layangi@example.com</a>
+                    <button class="copy-email-chip" title="Copy Email">Copy</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Location Card -->
+              <div class="contact-detail-card">
+                <div class="contact-icon-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="contact-meta">
+                  <span class="contact-label">Location</span>
+                  <span class="contact-value">Colombo / Malabe, Sri Lanka (SLIIT)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links Row -->
+            <div class="social-follow-wrap">
+              <span class="social-follow-label">Follow me</span>
+              <div class="social-icons-row">
+                <!-- GitHub -->
+                <a href="https://github.com/YOUR_PROFILE" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub Profile" aria-label="GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com/in/YOUR_PROFILE" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn Profile" aria-label="LinkedIn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+
+                <!-- Instagram / Alternative -->
+                <a href="https://instagram.com/YOUR_PROFILE" target="_blank" rel="noopener noreferrer" class="social-btn" title="Instagram / Social" aria-label="Instagram">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Right Form Column (Exact Dribbble Match) -->
+          <div class="contact-form-card glass-panel tilt-card reveal-item delay-200">
+            <div class="card-spotlight"></div>
+            
+            <h3 class="contact-form-title">Send a Message</h3>
+
+            <form id="portfolioContactForm" novalidate>
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="contactName" class="form-label">Your Name</label>
+                  <input type="text" id="contactName" class="form-input" placeholder="John Doe" required />
+                </div>
+                <div class="form-group">
+                  <label for="contactEmail" class="form-label">Email Address</label>
+                  <input type="email" id="contactEmail" class="form-input" placeholder="john@example.com" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject" class="form-label">Subject</label>
+                <input type="text" id="contactSubject" class="form-input" placeholder="Project inquiry" />
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label">Message</label>
+                <textarea id="contactMessage" class="form-textarea" placeholder="Tell me about your project or idea..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary form-submit-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       8. FOOTER
+       ========================================================================== -->
+  <footer class="footer-wrap">
+    <div class="container">
+      <div class="footer-inner">
+        <button id="backToTopBtn" class="back-to-top-btn" title="Back to Top" aria-label="Back to Top">
+          ↑
+        </button>
+
+        <div class="tech-stack-row">
+          <span class="tech-badge"><span>⚡</span> HTML5</span>
+          <span class="tech-badge"><span>🎨</span> CSS3 (Glassmorphism 2.0)</span>
+          <span class="tech-badge"><span>💻</span> JavaScript ES6+</span>
+          <span class="tech-badge"><span>⚛️</span> React.js Ready</span>
+          <span class="tech-badge"><span>✨</span> Framer Motion Transitions</span>
+          <span class="tech-badge"><span>☕</span> Java 21</span>
+          <span class="tech-badge"><span>🐙</span> GitHub</span>
+        </div>
+
+        <p class="footer-copy">
+          Designed &amp; Engineered by <strong>Chamathka Layangi</strong> • First-Year Computing Undergraduate at SLIIT.<br />
+          &copy; 2026 Chamathka Layangi. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/command-palette.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

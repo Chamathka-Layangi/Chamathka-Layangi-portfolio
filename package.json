@@ -1,0 +1,34 @@
+{
+  "name": "chamathka-layangi-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Futuristic single-page portfolio for Chamathka Layangi - First-Year Computing Undergraduate at SLIIT",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "portfolio",
+    "sliit",
+    "computing",
+    "iot",
+    "esp32",
+    "java",
+    "glassmorphism",
+    "framer-motion"
+  ],
+  "author": "Chamathka Layangi",
+  "license": "MIT",
+  "dependencies": {
+    "framer-motion": "^11.0.0",
+    "lucide-react": "^0.344.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.1.4"
+  }
+}

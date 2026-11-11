@@ -1,0 +1,616 @@
+/* ==========================================================================
+   COMPONENTS: CURSOR, COMMAND PALETTE, INTERACTIVE WIDGETS, MODALS, TOAST
+   Chamathka Layangi - Portfolio
+   ========================================================================== */
+
+/* ==========================================================================
+   1. CUSTOM GLOWING MOUSE CURSOR
+   ========================================================================== */
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-electric);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.15s ease-out, height 0.15s ease-out, background-color 0.15s ease-out;
+  box-shadow: 0 0 10px var(--accent-electric);
+}
+
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--accent-electric);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: transform 0.18s ease-out, width 0.2s ease-out, height 0.2s ease-out, border-color 0.2s ease-out, background-color 0.2s ease-out;
+  opacity: 0.6;
+}
+
+/* Hover state on clickable items */
+body.cursor-hover .custom-cursor-ring {
+  width: 54px;
+  height: 54px;
+  border-color: var(--accent-electric);
+  background-color: rgba(0, 240, 255, 0.12);
+  opacity: 1;
+}
+
+body.cursor-hover .custom-cursor-dot {
+  width: 5px;
+  height: 5px;
+  background-color: #FFFFFF;
+}
+
+@media (pointer: coarse) {
+  .custom-cursor-dot,
+  .custom-cursor-ring {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   2. COMMAND PALETTE (CTRL + K / CMD + K)
+   ========================================================================== */
+.cmd-palette-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 8, 16, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 2000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 120px;
+  padding-left: 20px;
+  padding-right: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+}
+
+.cmd-palette-modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cmd-palette-box {
+  width: 100%;
+  max-width: 620px;
+  background: var(--bg-card);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid var(--border-hover);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.8), 0 0 40px var(--accent-glow);
+  overflow: hidden;
+  transform: translateY(-20px) scale(0.98);
+  transition: transform var(--transition-fast);
+}
+
+.cmd-palette-modal.open .cmd-palette-box {
+  transform: translateY(0) scale(1);
+}
+
+.cmd-search-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.cmd-search-icon {
+  font-size: 1.25rem;
+  color: var(--accent-electric);
+}
+
+.cmd-search-input {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.cmd-search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.cmd-close-chip {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.cmd-results-list {
+  max-height: 360px;
+  overflow-y: auto;
+  padding: 12px;
+  list-style: none;
+}
+
+.cmd-group-title {
+  padding: 8px 12px 4px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.cmd-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cmd-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cmd-item-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-electric);
+  font-size: 0.95rem;
+}
+
+.cmd-item-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.cmd-item-category {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.cmd-item:hover,
+.cmd-item.selected {
+  background: rgba(0, 240, 255, 0.12);
+  color: var(--accent-electric);
+}
+
+.cmd-item:hover .cmd-item-icon,
+.cmd-item.selected .cmd-item-icon {
+  background: var(--accent-electric);
+  color: #0B0F19;
+}
+
+.cmd-footer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-top: 1px solid var(--border-subtle);
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.cmd-hints {
+  display: flex;
+  gap: 14px;
+}
+
+.cmd-hint-item span {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1px 5px;
+  border-radius: 4px;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   3. TERRAPULSE LIVE TELEMETRY WIDGET
+   ========================================================================== */
+.telemetry-widget-card {
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  background: rgba(8, 14, 28, 0.85);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  margin-top: 20px;
+}
+
+.telemetry-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.telemetry-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.telemetry-status-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  background: rgba(16, 185, 129, 0.15);
+  color: #10B981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.telemetry-sim-btn {
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  border-radius: var(--radius-full);
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid var(--accent-electric);
+  color: var(--accent-electric);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.telemetry-sim-btn:hover {
+  background: var(--accent-electric);
+  color: #0B0F19;
+}
+
+.telemetry-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.telemetry-metric-tile {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metric-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.metric-value {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--accent-electric);
+}
+
+.metric-sub {
+  font-size: 0.72rem;
+  color: #10B981;
+}
+
+.telemetry-canvas-wrap {
+  width: 100%;
+  height: 90px;
+  position: relative;
+  background: rgba(5, 10, 20, 0.7);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.telemetry-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ==========================================================================
+   4. ACADEMIC TASK MANAGER INTERACTIVE DEMO
+   ========================================================================== */
+.taskmanager-widget {
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  background: rgba(11, 17, 33, 0.8);
+  border: 1px solid var(--border-subtle);
+  margin-top: 20px;
+}
+
+.task-input-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.task-quick-input {
+  flex-grow: 1;
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  font-size: 0.88rem;
+  outline: none;
+}
+
+.task-quick-input:focus {
+  border-color: var(--accent-electric);
+}
+
+.task-add-btn {
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  background: var(--accent-gradient);
+  border: none;
+  color: #0B0F19;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.task-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.task-mini-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.task-mini-item:hover {
+  border-color: rgba(0, 240, 255, 0.3);
+  background: rgba(15, 23, 42, 0.8);
+}
+
+.task-check-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1.5px solid var(--accent-electric);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: transparent;
+  transition: all var(--transition-fast);
+}
+
+.task-mini-item.done .task-checkbox {
+  background: #10B981;
+  border-color: #10B981;
+  color: #FFFFFF;
+}
+
+.task-mini-item.done .task-text {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.task-badge-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: rgba(56, 189, 248, 0.15);
+  color: #38BDF8;
+}
+
+/* ==========================================================================
+   5. JAVA TERMINAL SIMULATOR
+   ========================================================================== */
+.terminal-simulator-card {
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  background: #060A14;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 20px;
+  font-family: var(--font-mono);
+}
+
+.terminal-sim-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.t-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.t-red { background: #EF4444; }
+.t-yellow { background: #F59E0B; }
+.t-green { background: #10B981; }
+
+.terminal-title-text {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.terminal-quick-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.term-btn {
+  padding: 3px 8px;
+  font-size: 0.72rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--accent-electric);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.term-btn:hover {
+  background: var(--accent-electric);
+  color: #060A14;
+}
+
+.terminal-sim-body {
+  height: 160px;
+  overflow-y: auto;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-right: 6px;
+}
+
+.term-line-output {
+  white-space: pre-wrap;
+}
+
+.term-line-success { color: #10B981; }
+.term-line-cyan { color: var(--accent-electric); }
+.term-line-warning { color: #F59E0B; }
+.term-line-prompt { color: #38BDF8; }
+
+.term-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.term-prompt-prefix {
+  font-size: 0.8rem;
+  color: #F59E0B;
+}
+
+.term-text-input {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   6. TOAST NOTIFICATION
+   ========================================================================== */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 3000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.toast-msg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--accent-electric);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px var(--accent-glow);
+  pointer-events: auto;
+  transform: translateX(120%);
+  transition: transform var(--transition-normal);
+}
+
+.toast-msg.show {
+  transform: translateX(0);
+}
+
+.toast-icon {
+  color: var(--accent-electric);
+  font-size: 1.15rem;
+}
+
+/* Responsive Component Adjustments */
+@media (max-width: 768px) {
+  .cmd-palette-box {
+    margin: 0 10px;
+  }
+
+  .telemetry-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,12 @@
+/* React Component Stylesheet - Imports shared glassmorphism and design tokens */
+@import '../css/style.css';
+@import '../css/glassmorphism.css';
+@import '../css/components.css';
+
+.portfolio-app-root {
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
